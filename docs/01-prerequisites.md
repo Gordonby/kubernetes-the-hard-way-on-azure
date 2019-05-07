@@ -10,15 +10,8 @@ This tutorial leverages the [Microsoft Azure](https://azure.microsoft.com) to st
 
 ## Microsoft Azure Cloud Platform SDK
 
-### Install the Microsoft Azure CLI 2.0
-
-Follow the Microsoft Azure CLI 2.0 [documentation](https://github.com/azure/azure-cli#installation) to install and configure the `az` command line utility.
-
-Verify the Microsoft Azure CLI 2.0 version is 2.0.41 or higher:
-
-```shell
-az --version
-```
+### Use the CloudShell
+https://shell.azure.com/
 
 ### Create a default Resource Group in a location
 
@@ -30,14 +23,3 @@ az group create -n kubernetes -l westus2
 
 > Use the `az account list-locations` command to view additional locations.
 
-## Running Commands in Parallel with tmux
-
-[tmux](https://github.com/tmux/tmux/wiki) can be used to run commands on multiple compute instances at the same time. Labs in this tutorial may require running the same commands across multiple compute instances, in those cases consider using tmux and splitting a window into multiple panes with `synchronize-panes` enabled to speed up the provisioning process.
-
-> The use of tmux is optional and not required to complete this tutorial.
-
-![tmux screenshot](images/tmux-screenshot.png)
-
-> Enable `synchronize-panes`: `ctrl+b` then `shift :`. Then type `set synchronize-panes on` at the prompt. To disable synchronization: `set synchronize-panes off`.
-
-Next: [Installing the Client Tools](02-client-tools.md)
